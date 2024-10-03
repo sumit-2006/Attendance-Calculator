@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Table Conversion</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='cropper.min.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Table Extractor</h1>
+    </header>
+    <div id="main-content">
+        <div class="container">
+            <h2>Upload Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <br>
+            <div id="croppedImageContainer" style="display: none;">
+                <h3>Select the Needed Part</h3>
+                <div>
+                    <img id="croppedImage" src="" alt="Cropped Image">
+                </div>
+                <br>
+                <button id="cropButton">Convert and Download</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Made by Aritra Ghosh 2024. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='cropper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
